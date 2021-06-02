@@ -1,0 +1,15 @@
+{% extends 'opensource/base.html' %}
+{% load static %}
+{% block title_block %}
+<h1>Add New Student</h1>
+{% endblock %}
+
+
+{% block main_block %}
+<form method="POST"> {% csrf_token %}
+    {{ student_form.as_p }}
+
+    <button class="btn btn-primary" type="submit">Save</button>
+    <button class="btn btn-danger" type="reset">Clear</button>
+</form>
+{% endblock %}
